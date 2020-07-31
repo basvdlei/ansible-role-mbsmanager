@@ -16,7 +16,7 @@ Requirements
 This role will download the given version of Server Software for Minecraft as
 found on: https://www.minecraft.net/en-us/download/server/bedrock You will need
 to agree with the legal documents (EULA and Privacy Policy) and change the
-`mbs_manager_upstream_license` role variable to "accepted" to use this role.
+`mbs_manager_upstream_license` role variable to "accept" to use this role.
 
 A `server.properties` must be provided by placing it in the playbook's `files`.
 An example can be found inside the server software download from
@@ -32,7 +32,7 @@ Available variables are listed below, along with default values (see
 
 Indication if the role consumer has read and agreed to the legal documents
 required to download and use the Server Software for Minecraft. Value should be
-`accepted` or the role will exit.
+`accept` or the role will exit.
 
 	mbs_manager_version: "1.16.1.02"
 

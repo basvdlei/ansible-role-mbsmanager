@@ -20,6 +20,6 @@
       path: /srv/mbs-manager
       pull: yes
       args:
-        license: "{{ mbs_manager_license }}"
+        license: "{{ mbs_manager_upstream_license }}"
         version: "{{ mbs_manager_version }}"
     source: build
