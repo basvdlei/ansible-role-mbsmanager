@@ -1,0 +1,9 @@
+[Unit]
+Description=Minecraft Bedrock Server Backup
+Requires=minecraft-bedrock-server.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/backups
+ExecStart=/usr/bin/curl --remote-name --remote-header-name -O http://localhost:8080/backup
+ExecStartPost=/bin/bash -c 'ls -tp | grep -v '/$' | tail -n +6 | xargs -I {} rm -- {}'

@@ -1,0 +1,22 @@
+[Unit]
+Description=mbs-manager for Minecraft Bedrock Server
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=-/usr/bin/docker stop %n
+ExecStartPre=-/usr/bin/docker rm %n
+ExecStart=/usr/bin/docker run --rm -t --name %n \
+                -p 19132:19132/udp \
+                -p 19133:19133/udp \
+                -p 127.0.0.1:8080:8080/tcp \
+                -v "{{ mbs_manager_datadir }}/server.properties:/usr/local/bedrock-server/server.properties:Z" \
+                -v "{{ mbs_manager_datadir }}/permissions.json:/usr/local/bedrock-server/permissions.json:Z" \
+                -v "{{ mbs_manager_datadir }}/whitelist.json:/usr/local/bedrock-server/whitelist.json:Z" \
+                -v "{{ mbs_manager_datadir }}/worlds:/usr/local/bedrock-server/worlds:Z" \
+                        localhost/mbs-manager:{{ mbs_manager_version }}
+
+[Install]
+WantedBy=multi-user.target

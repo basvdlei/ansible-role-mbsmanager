@@ -1,0 +1,23 @@
+---
+- name: Create backups directory
+  file:
+    path: "/srv/backups"
+    state: directory
+    mode: '0755'
+    owner: root
+    group: root
+
+- name: Copy backup systemd units
+  copy:
+    src: "{{ item }}"
+    dest: "/etc/systemd/system/"
+  with_items:
+    - minecraft-bedrock-server-backup.service
+    - minecraft-bedrock-server-backup.timer
+
+- name: Enable Minecraft Bedrock Server Backup timer
+  systemd:
+    name: minecraft-bedrock-server-backup.timer
+    daemon_reload: true
+    state: started
+    enabled: yes

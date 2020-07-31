@@ -1,0 +1,25 @@
+---
+- name: Create mbs-manager for Minecraft Bedrock Server directory
+  file:
+    path: /srv/mbs-manager
+    state: directory
+    mode: '0755'
+    owner: "{{ ansible_user }}"
+
+- name: Clone mbs-manager for Minecraft Bedrock Server container image repository
+  git:
+    repo: 'https://github.com/basvdlei/mbs-manager.git'
+    dest: /srv/mbs-manager
+    version: master
+    accept_hostkey: yes
+
+- name: Build the mbs-manager container image
+  docker_image:
+    name: 'localhost/mbs-manager:{{ mbs_manager_version }}'
+    build:
+      path: /srv/mbs-manager
+      pull: yes
+      args:
+        license: "{{ mbs_manager_license }}"
+        version: "{{ mbs_manager_version }}"
+    source: build
