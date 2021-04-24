@@ -34,7 +34,7 @@ Indication if the role consumer has read and agreed to the legal documents
 required to download and use the Server Software for Minecraft. Value should be
 `accept` or the role will exit.
 
-	mbs_manager_version: "1.16.1.02"
+	mbs_manager_version: "1.16.221.01"
 
 Server Software for Minecraft version to download, build and run.
 
