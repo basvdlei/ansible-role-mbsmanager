@@ -20,23 +20,27 @@
   copy:
     src: "{{ mbsmanager_permissions_file }}"
     dest: "{{ mbsmanager_datadir }}/permissions.json"
+    mode: '0644'
     force: false
 
 - name: Copy initial whitelist
   copy:
     src: "{{ mbsmanager_whitelist_file }}"
     dest: "{{ mbsmanager_datadir }}/whitelist.json"
+    mode: '0644'
     force: false
 
 - name: Copy server configuration
   copy:
     src: "{{ mbsmanager_properties_file }}"
     dest: "{{ mbsmanager_datadir }}/server.properties"
+    mode: '0644'
 
 - name: Create systemd unit file
   template:
     src: minecraft-bedrock-server.service.j2
     dest: /etc/systemd/system/minecraft-bedrock-server.service
+    mode: '0644'
   notify:
     - Restart Minecraft Bedrock Server
 

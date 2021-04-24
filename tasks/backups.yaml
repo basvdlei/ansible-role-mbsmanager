@@ -11,6 +11,7 @@
   copy:
     src: "{{ item }}"
     dest: "/etc/systemd/system/"
+    mode: '0644'
   with_items:
     - minecraft-bedrock-server-backup.service
     - minecraft-bedrock-server-backup.timer
