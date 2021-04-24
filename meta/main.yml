@@ -6,7 +6,3 @@ galaxy_info:
   platforms:
     - name: Debian
   galaxy_tags: []
-
-dependencies:
-  - src: https://github.com/basvdlei/ansible-role-docker.git
-    name: docker

@@ -13,6 +13,9 @@ ASSOCIATED WITH MOJANG.
 Requirements
 ------------
 
+[Docker](https://www.docker.com/) needs to be installed and running on the
+target system. Ansible also needs [Docker SDK for Python].
+
 This role will download the given version of Server Software for Minecraft as
 found on: https://www.minecraft.net/en-us/download/server/bedrock You will need
 to agree with the legal documents (EULA and Privacy Policy) and change the
