@@ -15,11 +15,11 @@
 
 - name: Build the mbs-manager container image
   docker_image:
-    name: 'localhost/mbs-manager:{{ mbs_manager_version }}'
+    name: 'localhost/mbs-manager:{{ mbsmanager_version }}'
     build:
       path: /srv/mbs-manager
       pull: yes
       args:
-        license: "{{ mbs_manager_upstream_license }}"
-        version: "{{ mbs_manager_version }}"
+        license: "{{ mbsmanager_upstream_license }}"
+        version: "{{ mbsmanager_version }}"
     source: build

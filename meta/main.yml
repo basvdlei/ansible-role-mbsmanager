@@ -1,6 +1,8 @@
 galaxy_info:
+  role_name: mbsmanager
+  namespace: basvdlei
   author: Bas van der Lei
-  description: mbs-manager - Minecraft Bedrock server
+  description: mbsmanager - MBS Manager for Minecraft Bedrock server
   license: BSD-3-Clause
   min_ansible_version: 2.9
   platforms:

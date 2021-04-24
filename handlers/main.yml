@@ -1,5 +1,5 @@
 ---
-# handlers file for ansible-role-mbs-manager
+# handlers file for mbsmanager
 - name: Restart Minecraft Bedrock Server
   systemd:
     name: minecraft-bedrock-server

@@ -1,7 +1,7 @@
 ---
 - name: Create world data directory
   file:
-    path: "{{ mbs_manager_datadir }}/worlds"
+    path: "{{ mbsmanager_datadir }}/worlds"
     state: directory
     mode: '0755'
     owner: root
@@ -9,29 +9,29 @@
 
 - name: Restore initial state (optional)
   unarchive:
-    creates: "{{ mbs_manager_datadir }}/worlds/{{ mbs_manager_initial_state_name }}/"
-    src: "{{ mbs_manager_initial_state_archive }}"
-    dest: "{{ mbs_manager_datadir }}/worlds/"
+    creates: "{{ mbsmanager_datadir }}/worlds/{{ mbsmanager_initial_state_name }}/"
+    src: "{{ mbsmanager_initial_state_archive }}"
+    dest: "{{ mbsmanager_datadir }}/worlds/"
   when:
-    - mbs_manager_initial_state_archive is defined
-    - mbs_manager_initial_state_name is defined
+    - mbsmanager_initial_state_archive is defined
+    - mbsmanager_initial_state_name is defined
 
 - name: Copy initial permissions
   copy:
-    src: "{{ mbs_manager_permissions_file }}"
-    dest: "{{ mbs_manager_datadir }}/permissions.json"
+    src: "{{ mbsmanager_permissions_file }}"
+    dest: "{{ mbsmanager_datadir }}/permissions.json"
     force: false
 
 - name: Copy initial whitelist
   copy:
-    src: "{{ mbs_manager_whitelist_file }}"
-    dest: "{{ mbs_manager_datadir }}/whitelist.json"
+    src: "{{ mbsmanager_whitelist_file }}"
+    dest: "{{ mbsmanager_datadir }}/whitelist.json"
     force: false
 
 - name: Copy server configuration
   copy:
-    src: "{{ mbs_manager_properties_file }}"
-    dest: "{{ mbs_manager_datadir }}/server.properties"
+    src: "{{ mbsmanager_properties_file }}"
+    dest: "{{ mbsmanager_datadir }}/server.properties"
 
 - name: Create systemd unit file
   template:

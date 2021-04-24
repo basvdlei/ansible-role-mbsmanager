@@ -1,8 +1,8 @@
 ---
-# defaults file for ansible-role-mbs-manager
-mbs_manager_upstream_license: "notaccepted"
-mbs_manager_version: "1.16.221.01"
-mbs_manager_datadir: /srv/minecraft-bedrock-data
-mbs_manager_permissions_file: default-permissions.json
-mbs_manager_properties_file: server.properties
-mbs_manager_whitelist_file: default-whitelist.json
+# defaults file for mbsmanager
+mbsmanager_upstream_license: "notaccepted"
+mbsmanager_version: "1.16.221.01"
+mbsmanager_datadir: /srv/minecraft-bedrock-data
+mbsmanager_permissions_file: default-permissions.json
+mbsmanager_properties_file: server.properties
+mbsmanager_whitelist_file: default-whitelist.json
