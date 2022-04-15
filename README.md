@@ -56,11 +56,11 @@ permissions file is included in this role.
 Filename of the `server.properties` to install from the Ansible src files.
 **Note:** a server.properties file needs to be provided.
 
-	mbsmanager_whitelist_file: default-whitelist.json
+	mbsmanager_allowlist_file: default-allowlist.json
 
 Filename for the initial `permissions.json` to install. Afterwards the server
 software will take over managing the contents of this file. A default empty
-whitelist file is included in this role.
+allowlist file is included in this role.
 
 	mbsmanager_initial_state_name
 

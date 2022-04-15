@@ -23,10 +23,10 @@
     mode: '0644'
     force: false
 
-- name: Copy initial whitelist
+- name: Copy initial allowlist
   copy:
-    src: "{{ mbsmanager_whitelist_file }}"
-    dest: "{{ mbsmanager_datadir }}/whitelist.json"
+    src: "{{ mbsmanager_allowlist_file }}"
+    dest: "{{ mbsmanager_datadir }}/allowlist.json"
     mode: '0644'
     force: false
 

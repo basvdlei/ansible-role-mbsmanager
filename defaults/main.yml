@@ -1,8 +1,8 @@
 ---
 # defaults file for mbsmanager
 mbsmanager_upstream_license: "notaccepted"
-mbsmanager_version: "1.16.221.01"
+mbsmanager_version: "1.18.12.01"
 mbsmanager_datadir: /srv/minecraft-bedrock-data
 mbsmanager_permissions_file: default-permissions.json
 mbsmanager_properties_file: server.properties
-mbsmanager_whitelist_file: default-whitelist.json
+mbsmanager_allowlist_file: default-allowlist.json
