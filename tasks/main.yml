@@ -1,9 +1,9 @@
 ---
 - name: Create mbs-manager container images
-  import_tasks: create-images.yaml
+  import_tasks: create-images.yml
 
 - name: Setup the Mincraft server instance
-  import_tasks: setup-server.yaml
+  import_tasks: setup-server.yml
 
 - name: Setup Mincraft server automated backups
-  import_tasks: backups.yaml
+  import_tasks: backups.yml
