@@ -10,7 +10,7 @@
   git:
     repo: 'https://github.com/basvdlei/mbs-manager.git'
     dest: /srv/mbs-manager
-    version: master
+    version: "{{ mbsmanager_branch }}"
     accept_hostkey: yes
 
 - name: Build the mbs-manager container image

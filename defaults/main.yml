@@ -1,5 +1,6 @@
 ---
 # defaults file for mbsmanager
+mbsmanager_branch: "master"
 mbsmanager_upstream_license: "notaccepted"
 mbsmanager_version: "1.19.73.02"
 mbsmanager_datadir: /srv/minecraft-bedrock-data
