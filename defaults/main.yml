@@ -7,3 +7,4 @@ mbsmanager_datadir: /srv/minecraft-bedrock-data
 mbsmanager_permissions_file: default-permissions.json
 mbsmanager_properties_file: server.properties
 mbsmanager_allowlist_file: default-allowlist.json
+mbsmanager_server_file: server.zip

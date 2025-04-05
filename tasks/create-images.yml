@@ -13,6 +13,13 @@
     version: "{{ mbsmanager_branch }}"
     accept_hostkey: yes
 
+- name: Copy the minecraft bedrock server zip file
+  copy:
+    src: "{{ mbsmanager_server_file }}"
+    dest: "/srv/mbs-manager/server.zip"
+    mode: '0644'
+    force: false
+
 - name: Build the mbs-manager container image
   docker_image:
     name: 'localhost/mbs-manager:{{ mbsmanager_version }}'
